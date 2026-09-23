@@ -1,11 +1,11 @@
 {
   "name": "VITALY BYSTROV — Photographer",
   "short_name": "VITALY BYSTROV",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#090909",
-  "theme_color": "#0b0b0b",
+  "background_color": "#080808",
+  "theme_color": "#090909",
   "description": "VITALY BYSTROV — Photographer in Tbilisi",
   "icons": []
 }
