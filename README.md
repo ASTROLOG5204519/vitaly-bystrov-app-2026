@@ -1,4 +1,4 @@
-# VITALY BYSTROV APP v16
+# VITALY BYSTROV APP v12
 
 Переработанная структура приложения по актуальному сайту VITALY BYSTROV.
 
@@ -11,5 +11,3 @@
 - ПРАЙСЫ — сохранены без изменений.
 - СОГЛАШЕНИЯ — документы полностью, с просмотром и скачиванием.
 - CONTACT — исходный контактный блок + форма обратной связи.
-
-- v16: HOME images are local repository assets; HOME no longer depends on Pixieset image URLs.
