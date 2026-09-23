@@ -1,11 +1,11 @@
-# VITALY BYSTROV APP v13
+# VITALY BYSTROV APP v12
 
 Переработанная структура приложения по актуальному сайту VITALY BYSTROV.
 
 - HOME — заставка и полная структура главной страницы.
 - ABOUT — биография, творческий путь, опыт, TAIGA SONG CONTEST – 2023, новая глава и настоящее время.
 - PORTFOLIO — MODELS / PORTRAITS / STREET PHOTO / LANDSCAPE; оставлено внутри приложения.
-- JOURNAL — только личная галерея; перед ней текст и кнопка перехода на CONTACT.
+- JOURNAL — точная структура из актуальной страницы Journal + визуальный блок галереи.
 - TIKTOK — @vitaly_bistroff.
 - CLIENTS — сохранён без изменений.
 - ПРАЙСЫ — сохранены без изменений.
