@@ -1,17 +1,5 @@
-# VITALY BYSTROV APP v5
+# VITALY BYSTROV APP v6
 
-Version 5 uses real public portfolio images and real Pixieset gallery/page links.
+Premium photographer web app for VITALY BYSTROV.
 
-Portfolio categories:
-- MODELS
-- PORTRAITS
-- STREET PHOTO
-- LANDSCAPE
-
-Upload these files to the repository root:
-index.html
-manifest.json
-sw.js
-README.md
-
-After replacing the files, GitHub Pages will redeploy the project.
+v6 fixes the Home screen: it is now a full landing page with hero, introduction, featured portfolio, and clear calls to action instead of a hero-only splash.
