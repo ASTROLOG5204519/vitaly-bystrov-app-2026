@@ -98,8 +98,35 @@ header{z-index:1000}
 }
 
 </style>
+<style id="v26-home-polish-css">
+/* V26 — final HOME visual polish: editorial spacing, restrained scale, consistent rhythm */
+.home-hero{padding:0 0 72px;text-align:center}
+.home-quote{max-width:900px;padding:74px 24px 44px;font-size:clamp(30px,4.7vw,56px);line-height:1.18}
+.home-main-photo{display:block;width:min(790px,100%);max-width:790px;height:auto;margin:0 auto;object-fit:contain;border:0;padding:0;background:transparent}
+.home-intro{padding-top:84px;padding-bottom:84px}
+.home-poetry{padding-top:84px;padding-bottom:84px}
+.home-poetry blockquote{max-width:850px;margin:42px auto 0}
+.home-intro .copy,.home-poetry .copy{max-width:760px;margin-left:auto;margin-right:auto}
+.section-grid{align-items:start}
+.page#page-home .photo-block{max-width:790px;margin-left:auto;margin-right:auto;margin-top:52px}
+.page#page-home .photo-block img{display:block;width:100%;height:auto;object-fit:contain;border:0;padding:0;background:transparent}
+.page#page-home .gallery-grid{max-width:790px;margin:52px auto 0}
+.page#page-home .gallery-grid .gallery-item{border:0;background:transparent;padding:0;box-shadow:none}
+.page#page-home .gallery-grid .gallery-item img{display:block;width:100%;height:auto;object-fit:contain;border:0;padding:0;background:transparent}
+.page#page-home .cta{padding-top:76px;padding-bottom:76px}
+.page#page-home .cta-photo{width:min(790px,100%);max-width:790px;margin:0 auto 50px}
+@media(max-width:720px){
+  .home-hero{padding-bottom:54px}
+  .home-quote{padding:48px 18px 32px;font-size:31px}
+  .home-intro,.home-poetry{padding-top:64px;padding-bottom:64px}
+  .page#page-home .photo-block{margin-top:34px}
+  .page#page-home .gallery-grid{margin-top:34px}
+  .page#page-home .cta{padding-top:54px;padding-bottom:56px}
+  .page#page-home .cta-photo{margin-bottom:34px}
+}
+</style>
 <style id="v25-photo-lightbox-css">
-  /* V25 — click any photo to open it large, without cropping */
+  /* V25/V26 — click any photo to open it large, without cropping */
   img:not([data-no-lightbox]) { cursor: zoom-in; }
   .v25-lightbox {
     position: fixed; inset: 0; z-index: 99999;
@@ -138,6 +165,7 @@ header{z-index:1000}
   }
 </style>
 
+<meta name="app-version" content="V26 — HOME final polish"><!-- V26 -->
 </head>
 <body>
 <header><div class="wrap nav"><button class="brand navbtn" data-page="home">VITALY <span>BYSTROV</span></button><button aria-label="Открыть меню" class="menu-toggle" id="menuToggle">MENU</button><nav class="mainnav" id="mainNav"><div class="navgrid">
