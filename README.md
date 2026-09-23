@@ -1,7 +1,13 @@
-# VITALY BYSTROV APP v10
+# VITALY BYSTROV APP v12
 
-Separate in-app navigation for HOME, ABOUT, PORTFOLIO (MODELS / PORTRAITS / STREET PHOTO / LANDSCAPE), JOURNAL, TIKTOK, CLIENTS, PRICES, AGREEMENTS and CONTACT.
+Переработанная структура приложения по актуальному сайту VITALY BYSTROV.
 
-Portfolio pages are displayed inside the application instead of redirecting to the browser. External services are used only where their live content cannot be reproduced safely inside a static app (TikTok and protected Pixieset client galleries).
-
-Replace `index.html`, `manifest.json` and `sw.js` in the GitHub Pages repository.
+- HOME — заставка и полная структура главной страницы.
+- ABOUT — биография, творческий путь, опыт, TAIGA SONG CONTEST – 2023, новая глава и настоящее время.
+- PORTFOLIO — MODELS / PORTRAITS / STREET PHOTO / LANDSCAPE; оставлено внутри приложения.
+- JOURNAL — точная структура из актуальной страницы Journal + визуальный блок галереи.
+- TIKTOK — @vitaly_bistroff.
+- CLIENTS — сохранён без изменений.
+- ПРАЙСЫ — сохранены без изменений.
+- СОГЛАШЕНИЯ — документы полностью, с просмотром и скачиванием.
+- CONTACT — исходный контактный блок + форма обратной связи.
