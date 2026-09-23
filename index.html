@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="VITALY BYSTROV — Photographer in Tbilisi. Portrait, street and editorial photography.">
+<link rel="manifest" href="./manifest.json">
+<title>VITALY BYSTROV — Photographer</title>
+<style>
+:root{--bg:#090909;--panel:#111;--text:#f4f1e9;--muted:#aaa49a;--gold:#c7a45a;--line:#292929}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit}
+header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(9,9,9,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 22px}
+.logo{font-weight:700;letter-spacing:2px}.logo span{color:var(--gold)}
+nav{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:12px;letter-spacing:1.2px;color:#ddd;padding:8px 2px}nav a.active,nav a:hover{color:var(--gold)}
+main{padding-top:67px}.section{max-width:1200px;margin:auto;padding:90px 22px;scroll-margin-top:65px}.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:90px 22px;background:radial-gradient(circle at 50% 35%,#262014 0,#111 32%,#090909 70%)}
+.hero h1{font-size:clamp(42px,8vw,92px);letter-spacing:8px;margin:0}.hero p{color:var(--muted);letter-spacing:3px;text-transform:uppercase}.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:13px 22px;margin-top:18px;cursor:pointer;background:transparent}
+h2{font-size:34px;letter-spacing:4px;margin:0 0 12px}.sub{color:var(--muted);margin:0 0 35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);padding:25px;min-height:170px}.card h3{color:var(--gold);letter-spacing:2px}.photo{aspect-ratio:4/3;background-size:cover;background-position:center;border:1px solid var(--line);cursor:pointer}
+#p1{background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85')}
+#p2{background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85')}
+#p3{background-image:url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85')}
+#p4{background-image:url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1000&q=85')}
+#p5{background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=85')}
+#p6{background-image:url('https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=1000&q=85')}
+.price{font-size:28px;color:var(--gold)}form{display:grid;gap:13px;max-width:650px}input,textarea,select{width:100%;padding:14px;background:#0f0f0f;color:#fff;border:1px solid var(--line);outline:none}textarea{min-height:130px;resize:vertical}.notice{color:var(--muted);font-size:13px;line-height:1.6}
+footer{border-top:1px solid var(--line);padding:35px 22px;text-align:center;color:var(--muted);font-size:12px}.mobile-nav{display:none}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);display:none;z-index:50;align-items:center;justify-content:center;padding:30px}.lightbox.show{display:flex}.lightbox img{max-width:94vw;max-height:88vh}.close{position:absolute;top:20px;right:25px;color:#fff;font-size:35px;cursor:pointer}
+@media(max-width:760px){nav{display:none}.section{padding:65px 17px}.grid{grid-template-columns:1fr 1fr;gap:10px}.hero{min-height:75vh}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,10,.96);border-top:1px solid var(--line);z-index:30;justify-content:space-around;padding:9px 4px calc(9px + env(safe-area-inset-bottom))}.mobile-nav a{font-size:10px;color:#bbb;text-align:center}.mobile-nav a.active{color:var(--gold)}main{padding-bottom:58px}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a class="logo" href="#home">VITALY <span>BYSTROV</span></a>
+<nav>
+<a href="#home">HOME</a><a href="#portfolio">PORTFOLIO</a><a href="#about">ABOUT</a><a href="#prices">PRICES</a><a href="#booking">BOOKING</a><a href="#gallery">CLIENT GALLERY</a><a href="#contact">CONTACT</a>
+</nav></div></header>
+
+<main>
+<section id="home" class="hero">
+<div><p>PHOTOGRAPHER · TBILISI</p><h1>VITALY<br>BYSTROV</h1><p>Portrait · Street · Editorial</p><a class="btn" href="#portfolio">VIEW PORTFOLIO</a></div>
+</section>
+
+<section id="portfolio" class="section">
+<h2>PORTFOLIO</h2><p class="sub">Selected visual stories and portraits.</p>
+<div class="grid">
+<div class="photo" id="p1" data-full="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=90"></div>
+<div class="photo" id="p2" data-full="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=90"></div>
+<div class="photo" id="p3" data-full="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90"></div>
+<div class="photo" id="p4" data-full="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1800&q=90"></div>
+<div class="photo" id="p5" data-full="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1800&q=90"></div>
+<div class="photo" id="p6" data-full="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=1800&q=90"></div>
+</div>
+</section>
+
+<section id="about" class="section"><h2>ABOUT</h2><p class="sub">VITALY BYSTROV — photographer based in Tbilisi.</p>
+<div class="card"><p class="notice">I work with portraits, street photography and personal visual stories. My approach is built around natural emotion, cinematic light and honest connection with the person in front of the camera.</p><p class="notice">Georgia became a new chapter of my creative journey. Today I create photographs for people, models, artists and personal brands.</p></div></section>
+
+<section id="prices" class="section"><h2>PRICES</h2><p class="sub">Photography packages.</p>
+<div class="grid"><div class="card"><h3>PORTRAIT</h3><div class="price">from 150 GEL</div><p class="notice">Individual portrait session · planning · professional editing.</p></div>
+<div class="card"><h3>STREET</h3><div class="price">from 180 GEL</div><p class="notice">Urban photo walk · candid moments · edited selection.</p></div>
+<div class="card"><h3>EDITORIAL</h3><div class="price">from 300 GEL</div><p class="notice">Creative concept · fashion/editorial approach · advanced retouching.</p></div></div></section>
+
+<section id="booking" class="section"><h2>BOOKING</h2><p class="sub">Request a photography session.</p>
+<form id="bookingForm"><input id="name" required placeholder="Your name"><input id="contact" required placeholder="Instagram / Telegram / phone"><select id="type"><option>Portrait</option><option>Street Photo</option><option>Editorial</option><option>Other</option></select><input id="date" type="date"><textarea id="message" placeholder="Tell me briefly about your idea"></textarea><button class="btn" type="submit">PREPARE BOOKING REQUEST</button></form>
+<p id="bookingStatus" class="notice"></p></section>
+
+<section id="gallery" class="section"><h2>CLIENT GALLERY</h2><p class="sub">Private gallery access.</p>
+<div class="card"><p class="notice">Enter your gallery code. This demo gate is only a front-end prototype and is not a secure authentication system.</p><form id="galleryForm"><input id="galleryCode" inputmode="numeric" placeholder="Gallery code"><button class="btn" type="submit">OPEN GALLERY</button></form><p id="galleryStatus" class="notice"></p></div></section>
+
+<section id="contact" class="section"><h2>CONTACT</h2><p class="sub">Tbilisi · Georgia</p>
+<div class="grid"><div class="card"><h3>INSTAGRAM</h3><p class="notice">Add your Instagram link here.</p></div><div class="card"><h3>TELEGRAM</h3><p class="notice">Add your Telegram link here.</p></div><div class="card"><h3>EMAIL</h3><p class="notice">Add your email here.</p></div></div></section>
+</main>
+<footer>© 2026 VITALY BYSTROV · PHOTOGRAPHER IN TBILISI</footer>
+<div class="mobile-nav"><a href="#home">HOME</a><a href="#portfolio">PORTFOLIO</a><a href="#about">ABOUT</a><a href="#prices">PRICES</a><a href="#booking">BOOKING</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a></div>
+<div class="lightbox" id="lightbox"><span class="close" id="close">×</span><img id="lightboxImg" alt="Portfolio image"></div>
+
+<script>
+(function(){
+const links=[...document.querySelectorAll('header nav a,.mobile-nav a')];
+const sections=[...document.querySelectorAll('main section')];
+function setActive(){
+  let current='home', y=scrollY+120;
+  sections.forEach(s=>{if(s.offsetTop<=y) current=s.id});
+  links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+}
+addEventListener('scroll',setActive,{passive:true}); setActive();
+
+document.querySelectorAll('.photo').forEach(el=>el.addEventListener('click',()=>{
+ document.getElementById('lightboxImg').src=el.dataset.full;
+ document.getElementById('lightbox').classList.add('show');
+}));
+document.getElementById('close').onclick=()=>document.getElementById('lightbox').classList.remove('show');
+document.getElementById('lightbox').onclick=e=>{if(e.target.id==='lightbox')e.currentTarget.classList.remove('show')};
+
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const text=`VITALY BYSTROV — BOOKING REQUEST\nName: ${name.value}\nContact: ${contact.value}\nType: ${type.value}\nDate: ${date.value||'not specified'}\nIdea: ${message.value||'—'}`;
+ navigator.clipboard?.writeText(text).then(()=>bookingStatus.textContent='Request copied. Paste it into Telegram, Instagram or email.').catch(()=>bookingStatus.textContent=text);
+});
+document.getElementById('galleryForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ galleryStatus.textContent = galleryCode.value==='2026' ? 'Demo gallery unlocked. Replace this with a real Pixieset client-gallery link for production.' : 'Code not found.';
+});
+if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+})();
+</script>
+</body></html>
