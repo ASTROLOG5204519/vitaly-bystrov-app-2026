@@ -1,10 +1,9 @@
 {
-  "name":"VITALY BYSTROV — PHOTOGRAPHER TBILISI",
+  "name":"VITALY BYSTROV APP v11",
   "short_name":"VITALY BYSTROV",
   "start_url":"./index.html#home",
   "display":"standalone",
   "background_color":"#080808",
   "theme_color":"#080808",
-  "lang":"ru",
-  "description":"VITALY BYSTROV — photographer in Tbilisi, Georgia."
+  "icons":[]
 }

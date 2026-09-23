@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#080808"><meta name="description" content="VITALY BYSTROV — фотограф в Тбилиси.">
-<link rel="manifest" href="manifest.json"><title>VITALY BYSTROV — PHOTOGRAPHER TBILISI | APP v10</title>
+<link rel="manifest" href="manifest.json"><title>VITALY BYSTROV — PHOTOGRAPHER TBILISI | APP v11</title>
 <style>
 :root{--bg:#080808;--panel:#101010;--gold:#c7a76a;--white:#f5f2eb;--muted:#999;--line:#292929}
 *{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 28px}
@@ -17,14 +17,65 @@ header{position:sticky;top:0;z-index:100;background:rgba(8,8,8,.97);backdrop-fil
 .footer{text-align:center;padding:35px 20px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.1em;color:#777}
 @media(max-width:1050px){.mainnav{display:none}.menu-toggle{display:block}.nav{height:68px}.mobile-open .mainnav{display:flex;position:absolute;top:68px;left:0;right:0;background:#0a0a0a;border-bottom:1px solid #333;padding:15px 20px;flex-direction:column;align-items:stretch}.mobile-open .dropdown-panel{position:static;box-shadow:none;margin-top:5px}.mobile-open .dropdown-panel{display:none}.mobile-open .dropdown.open .dropdown-panel{display:block}.section-grid,.about-grid{grid-template-columns:1fr;gap:30px}.cards{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.hero{padding-top:55px}.section{padding:62px 0}.wrap{padding:0 20px}}
 @media(max-width:620px){.gallery-grid{grid-template-columns:1fr}.quote{font-size:29px}.nav{padding:0 4px}.brand{font-size:12px}}
+
+/* V11 navigation + layout refinement */
+header{z-index:1000}
+.nav{min-height:72px}
+.menu-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:92px;height:38px}
+.mainnav{display:none;position:absolute;top:72px;left:0;right:0;background:rgba(8,8,8,.985);border-bottom:1px solid #333;box-shadow:0 24px 60px rgba(0,0,0,.75);padding:24px 28px 30px}
+.mainnav.open{display:block}
+.navgrid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.navbtn{width:100%;border:1px solid transparent;background:#0d0d0d;color:#ddd;font:inherit;font-size:11px;letter-spacing:.14em;padding:13px 14px;cursor:pointer;text-align:left}
+.navbtn:hover,.navbtn.active{color:var(--gold);border-color:#3b3324;background:#12100d}
+.portfolio-menu{border:1px solid #2b2b2b;background:#0b0b0b}
+.portfolio-title{display:flex;justify-content:space-between;align-items:center}
+.portfolio-sub{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #242424;padding:7px}
+.portfolio-sub button{border:0;background:transparent;color:#aaa;text-align:left;padding:10px;font:inherit;font-size:10px;letter-spacing:.12em;cursor:pointer}
+.portfolio-sub button:hover,.portfolio-sub button.active{color:var(--gold);background:#141414}
+.menu-caption{max-width:1180px;margin:14px auto 0;color:#666;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.page{min-height:calc(100vh - 72px)}
+.page-head{padding:64px 0 38px}
+.menu-page .section{border-top:1px solid #252525}
+.menu-page .section+.section{border-top:1px solid #252525}
+.gallery-grid{gap:20px}
+.gallery-item{border:1px solid #3a3a3a;padding:10px;box-shadow:inset 0 0 0 1px #111}
+.gallery-item img,.photo-block img,.hero-photo,.about-photo img{object-fit:contain!important;height:auto!important}
+.gallery-item::after{content:none!important}
+.photo-block{border:1px solid #3a3a3a;box-shadow:inset 0 0 0 1px #111}
+.section{border-top:1px solid #252525}
+.divider{margin:8px auto;opacity:.75}
+/* no visible photo captions */
+.gallery-item figcaption,.photo-caption,.image-caption,.caption{display:none!important}
+@media(max-width:1050px){
+  .mainnav{top:68px;padding:16px 18px 22px}
+  .navgrid{grid-template-columns:1fr;gap:7px}
+  .portfolio-sub{grid-template-columns:1fr 1fr}
+  .menu-caption{margin-top:10px}
+}
+@media(max-width:620px){
+  .nav{min-height:68px}
+  .mainnav{top:68px}
+  .navgrid{gap:6px}
+  .portfolio-sub{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-item{padding:8px}
+}
+
 </style></head>
 <body>
-<header><div class="wrap nav"><button class="brand navbtn" data-page="home">VITALY <span>BYSTROV</span></button><button class="menu-toggle" id="menuToggle">MENU</button><nav class="mainnav">
-<button class="navbtn" data-page="home">HOME</button><button class="navbtn" data-page="about">ABOUT</button>
-<div class="dropdown"><button class="navbtn" id="portfolioBtn">PORTFOLIO ▾</button><div class="dropdown-panel">
-<button data-page="models">MODELS</button><button data-page="portraits">PORTRAITS</button><button data-page="street">STREET PHOTO</button><button data-page="landscape">LANDSCAPE</button></div></div>
-<button class="navbtn" data-page="journal">JOURNAL</button><button class="navbtn" data-page="tiktok">TIKTOK</button><button class="navbtn" data-page="clients">КЛИЕНТЫ</button><button class="navbtn" data-page="prices">ПРАЙСЫ</button><button class="navbtn" data-page="agreements">СОГЛАШЕНИЯ</button><button class="navbtn" data-page="contact">CONTACT</button>
-</nav></div></header>
+<header><div class="wrap nav"><button class="brand navbtn" data-page="home">VITALY <span>BYSTROV</span></button><button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">MENU</button><nav class="mainnav" id="mainNav"><div class="navgrid">
+<button class="navbtn" data-page="home">HOME</button>
+<button class="navbtn" data-page="about">ABOUT</button>
+<div class="portfolio-menu"><button class="navbtn portfolio-title" id="portfolioBtn" type="button"><span>PORTFOLIO</span><span>+</span></button><div class="portfolio-sub">
+<button data-page="models">MODELS</button><button data-page="portraits">PORTRAITS</button><button data-page="street">STREET PHOTO</button><button data-page="landscape">LANDSCAPE</button>
+</div></div>
+<button class="navbtn" data-page="journal">JOURNAL</button>
+<button class="navbtn" data-page="tiktok">TIKTOK</button>
+<button class="navbtn" data-page="clients">КЛИЕНТЫ</button>
+<button class="navbtn" data-page="prices">ПРАЙСЫ</button>
+<button class="navbtn" data-page="agreements">СОГЛАШЕНИЯ</button>
+<button class="navbtn" data-page="contact">CONTACT</button>
+</div><div class="menu-caption">VITALY BYSTROV · PHOTOGRAPHER · TBILISI, GEORGIA</div></nav></div></header>
 <main>
 <section id="page-home" class="page active"><section class="hero wrap"><div class="quote">«Я фотографирую не моменты — я сохраняю эмоции.»</div><img class="hero-photo" src="https://images-pw.pixieset.com/elementfield/x790xlo/3333333-0583c2da-1500.jpg" alt="Портрет Виталия Быстрова"><div class="eyebrow">ЧЕЛОВЕК С ОБЪЕКТИВОМ</div><h1>Привет!</h1><div class="intro">Меня зовут Виталий.<br>Живу и работаю в Тбилиси, Грузия.<br><br>Я фотограф и человек, который любит настоящие эмоции, живые лица и истории, которые невозможно повторить.<br><br>Для меня фотография — это не просто красивый кадр. Это настроение, взгляд, характер, движение и тот самый момент, который через годы снова возвращает вас в сегодняшний день.</div><button class="btn" data-page="about">ПОДРОБНЕЕ ОБО МНЕ</button></section><div class="divider"></div>
 <section class="section"><div class="wrap section-grid"><h2>Фотография — это визуальная поэзия.</h2><div class="copy"><p>Один кадр может рассказать целую историю — если в нём есть человек, эмоция и настоящий момент.</p><p>«Моя цель — запечатлеть прекрасные промежуточные моменты, которые делают вашу историю такой особенной».</p></div></div></section><div class="divider"></div>
@@ -56,12 +107,32 @@ header{position:sticky;top:0;z-index:100;background:rgba(8,8,8,.97);backdrop-fil
 </main><footer class="footer">© 2026 VITALY BYSTROV | PHOTOGRAPHER TBILISI, GEORGIA</footer>
 <script>
 const pages=['home','about','models','portraits','street','landscape','journal','tiktok','clients','prices','agreements','contact'];
-function showPage(name){if(!pages.includes(name))name='home';document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+name).classList.add('active');document.querySelectorAll('[data-page]').forEach(a=>a.classList.toggle('active',a.dataset.page===name));document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open'));document.body.classList.remove('mobile-open');window.scrollTo(0,0)}
+const mainNav=document.getElementById('mainNav');
+const menuToggle=document.getElementById('menuToggle');
+const portfolioBtn=document.getElementById('portfolioBtn');
+function showPage(name){
+  if(!pages.includes(name)) name='home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const page=document.getElementById('page-'+name); if(page) page.classList.add('active');
+  document.querySelectorAll('[data-page]').forEach(a=>a.classList.toggle('active',a.dataset.page===name));
+  document.querySelectorAll('.portfolio-sub button').forEach(a=>a.classList.toggle('active',a.dataset.page===name));
+  mainNav.classList.remove('open');
+  document.body.classList.remove('mobile-open');
+  window.scrollTo({top:0,left:0,behavior:'auto'});
+}
 function route(){showPage((location.hash||'#home').slice(1).toLowerCase())}
-document.addEventListener('click',e=>{const a=e.target.closest('[data-page]');if(a){const name=a.dataset.page;if(location.hash.slice(1)!==name){e.preventDefault();location.hash=name}else{e.preventDefault();showPage(name)}}});
-const pb=document.getElementById('portfolioBtn');pb.addEventListener('click',e=>{e.stopPropagation();pb.parentElement.classList.toggle('open')});
-document.addEventListener('click',e=>{if(!e.target.closest('.dropdown'))document.querySelectorAll('.dropdown').forEach(d=>d.classList.remove('open'))});
-const mt=document.getElementById('menuToggle');mt.addEventListener('click',()=>document.body.classList.toggle('mobile-open'));
-window.addEventListener('hashchange',route);route();
-if('serviceWorker'in navigator){navigator.serviceWorker.register('sw.js?v=10').catch(()=>{})}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('[data-page]');
+  if(a){
+    e.preventDefault();
+    const name=a.dataset.page;
+    if(location.hash.slice(1)!==name) location.hash=name; else showPage(name);
+  }
+});
+menuToggle.addEventListener('click',e=>{e.stopPropagation();mainNav.classList.toggle('open');});
+portfolioBtn.addEventListener('click',e=>{e.stopPropagation();});
+document.addEventListener('click',e=>{if(mainNav.classList.contains('open')&&!e.target.closest('.mainnav')&&!e.target.closest('#menuToggle')) mainNav.classList.remove('open');});
+window.addEventListener('hashchange',route);
+route();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js?v=11').catch(()=>{});}
 </script></body></html>
