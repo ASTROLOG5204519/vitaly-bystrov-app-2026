@@ -97,7 +97,48 @@ header{z-index:1000}
   .gallery-feature-grid { gap: 8px !important; }
 }
 
-</style></head>
+</style>
+<style id="v25-photo-lightbox-css">
+  /* V25 — click any photo to open it large, without cropping */
+  img:not([data-no-lightbox]) { cursor: zoom-in; }
+  .v25-lightbox {
+    position: fixed; inset: 0; z-index: 99999;
+    display: none; align-items: center; justify-content: center;
+    background: rgba(0,0,0,.94); padding: 24px;
+    box-sizing: border-box;
+    touch-action: none;
+  }
+  .v25-lightbox.is-open { display: flex; }
+  .v25-lightbox img {
+    display: block; width: auto !important; height: auto !important;
+    max-width: 96vw !important; max-height: 92vh !important;
+    object-fit: contain !important; object-position: center !important;
+    margin: 0 !important; padding: 0 !important; border: 0 !important;
+    box-shadow: none !important; background: transparent !important;
+    cursor: zoom-out; user-select: none; -webkit-user-drag: none;
+    transform: scale(1); transition: transform .18s ease;
+  }
+  .v25-lightbox.is-zoomed img { max-width: none !important; max-height: none !important; transform: scale(1.55); cursor: zoom-out; }
+  .v25-lightbox-close {
+    position: absolute; top: 12px; right: 16px; z-index: 2;
+    width: 44px; height: 44px; border: 0; border-radius: 50%;
+    background: rgba(0,0,0,.48); color: #fff; font-size: 30px;
+    line-height: 42px; text-align: center; cursor: pointer;
+  }
+  .v25-lightbox-hint {
+    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,.72); font-size: 12px; letter-spacing: .04em;
+    pointer-events: none; text-align: center;
+  }
+  @media (max-width: 620px){
+    .v25-lightbox { padding: 10px; }
+    .v25-lightbox img { max-width: 98vw !important; max-height: 88vh !important; }
+    .v25-lightbox.is-zoomed img { transform: scale(1.35); }
+    .v25-lightbox-hint { font-size: 11px; bottom: 8px; }
+  }
+</style>
+
+</head>
 <body>
 <header><div class="wrap nav"><button class="brand navbtn" data-page="home">VITALY <span>BYSTROV</span></button><button aria-label="Открыть меню" class="menu-toggle" id="menuToggle">MENU</button><nav class="mainnav" id="mainNav"><div class="navgrid">
 <button class="navbtn" data-page="home">HOME</button>
@@ -246,4 +287,56 @@ function downloadDoc(type){const text=type==='offer'?offerText:consentText;const
 const contactForm=document.getElementById('contactForm'); if(contactForm){contactForm.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(contactForm);const subject=encodeURIComponent('Запрос с сайта VITALY BYSTROV — '+d.get('name'));const body=encodeURIComponent('Имя: '+d.get('name')+'\nEmail: '+d.get('email')+'\n\n'+d.get('message'));window.location.href='mailto:bistroff84@mail.ru?subject='+subject+'&body='+body;});}
 route();
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js?v=18').catch(()=>{});}
-</script></body></html>
+</script>
+<div class="v25-lightbox" id="v25Lightbox" aria-hidden="true">
+  <button class="v25-lightbox-close" id="v25LightboxClose" aria-label="Закрыть">×</button>
+  <img id="v25LightboxImage" alt="">
+  <div class="v25-lightbox-hint">Нажмите на фото для увеличения · Esc — закрыть</div>
+</div>
+<script id="v25-photo-lightbox-js">
+(function(){
+  const box = document.getElementById('v25Lightbox');
+  const viewer = document.getElementById('v25LightboxImage');
+  const closeBtn = document.getElementById('v25LightboxClose');
+  if(!box || !viewer) return;
+
+  let active = null;
+  function openLightbox(img){
+    const src = img.getAttribute('data-lightbox-src') || img.currentSrc || img.src;
+    if(!src) return;
+    active = img;
+    viewer.src = src;
+    viewer.alt = img.alt || 'VITALY BYSTROV — фотография';
+    box.classList.remove('is-zoomed');
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeLightbox(){
+    box.classList.remove('is-open','is-zoomed');
+    box.setAttribute('aria-hidden','true');
+    viewer.removeAttribute('src');
+    document.body.style.overflow='';
+    active=null;
+  }
+  document.addEventListener('click', function(e){
+    const img=e.target.closest('img:not([data-no-lightbox])');
+    if(img && !box.contains(img)){
+      e.preventDefault();
+      openLightbox(img);
+    }
+  });
+  viewer.addEventListener('click', function(e){
+    e.stopPropagation();
+    box.classList.toggle('is-zoomed');
+  });
+  closeBtn.addEventListener('click', function(e){ e.stopPropagation(); closeLightbox(); });
+  box.addEventListener('click', function(e){ if(e.target===box) closeLightbox(); });
+  document.addEventListener('keydown', function(e){
+    if(!box.classList.contains('is-open')) return;
+    if(e.key==='Escape') closeLightbox();
+  });
+})();
+</script>
+
+</body></html>
