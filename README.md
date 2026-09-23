@@ -1,5 +1,7 @@
-# VITALY BYSTROV APP v6
+# VITALY BYSTROV APP v7
 
-Premium photographer web app for VITALY BYSTROV.
+Веб-приложение премиум-класса для фотографа Виталия Быстрова.
 
-v6 fixes the Home screen: it is now a full landing page with hero, introduction, featured portfolio, and clear calls to action instead of a hero-only splash.
+Версия 7: HOME теперь повторяет содержание реальной главной страницы Pixieset: цитата, «Человек с объективом», приветствие, «Фотография — это визуальная поэзия», «Мой подход», «Мой взгляд», фотографии и финальный призыв к записи.
+
+Портфолио и остальные разделы приложения сохранены.
