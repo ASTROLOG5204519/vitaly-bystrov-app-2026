@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#080808"><meta name="description" content="VITALY BYSTROV — фотограф в Тбилиси.">
-<link rel="manifest" href="manifest.json"><title>VITALY BYSTROV — PHOTOGRAPHER TBILISI | APP v17</title>
+<link rel="manifest" href="manifest.json"><title>VITALY BYSTROV — PHOTOGRAPHER TBILISI | APP v18</title>
 <style>
 :root{--bg:#080808;--panel:#101010;--gold:#c7a76a;--white:#f5f2eb;--muted:#999;--line:#292929}
 *{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 28px}
@@ -81,7 +81,7 @@ header{z-index:1000}
 <button class="navbtn" data-page="contact">CONTACT</button>
 </div><div class="menu-caption">VITALY BYSTROV · PHOTOGRAPHER · TBILISI, GEORGIA</div></nav></div></header>
 <main>
-<section id="page-home" class="page active">
+<section id="page-home" class="page active" data-home-order="site-mirror-2026-09-23">
   <section class="home-hero">
     <div class="home-quote">«Я фотографирую не моменты — я сохраняю эмоции.»</div>
     <img class="home-main-photo" src="https://images-pw.pixieset.com/elementfield/x790xlo/3333333-0583c2da-1500.jpg" alt="VITALY BYSTROV">
@@ -219,5 +219,5 @@ const consentText=`СОГЛАСИЕ на использование изобра
 function downloadDoc(type){const text=type==='offer'?offerText:consentText;const name=type==='offer'?'VITALY_BYSTROV_PUBLIC_OFFER.txt':'VITALY_BYSTROV_IMAGE_CONSENT.txt';const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 const contactForm=document.getElementById('contactForm'); if(contactForm){contactForm.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(contactForm);const subject=encodeURIComponent('Запрос с сайта VITALY BYSTROV — '+d.get('name'));const body=encodeURIComponent('Имя: '+d.get('name')+'\nEmail: '+d.get('email')+'\n\n'+d.get('message'));window.location.href='mailto:bistroff84@mail.ru?subject='+subject+'&body='+body;});}
 route();
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js?v=12').catch(()=>{});}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js?v=18').catch(()=>{});}
 </script></body></html>
