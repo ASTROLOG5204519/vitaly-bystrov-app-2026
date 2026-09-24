@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#080808" name="theme-color"/><meta content="VITALY BYSTROV — фотограф в Тбилиси." name="description"/>
-<link href="manifest.json" rel="manifest"/><title>VITALY BYSTROV — PHOTOGRAPHER TBILISI | APP v31</title>
+<link href="manifest.json" rel="manifest"/><title>VITALY BYSTROV — PHOTOGRAPHER TBILISI | APP v30</title>
 <style>
 :root{--bg:#080808;--panel:#101010;--gold:#c7a76a;--white:#f5f2eb;--muted:#999;--line:#292929}
 *{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 28px}
@@ -169,7 +169,7 @@ header{z-index:1000}
   }
 </style>
 
-<meta name="app-version" content="V31 — full brand header visible + best photos gallery"><!-- V27 + V28 + V29 -->
+<meta name="app-version" content="V30 — branded header + best photos gallery"><!-- V27 + V28 + V29 -->
 
 <style id="v27-journal-video">
 .journal-video{width:100%;max-width:920px;margin:0 auto;background:#050505;position:relative;aspect-ratio:16/9;overflow:hidden}
@@ -178,64 +178,17 @@ header{z-index:1000}
 @media(max-width:620px){.journal-video{width:100%;aspect-ratio:16/9}}
 </style>
 
-<style id="v31-brand-journal-css">
-/* V31 — full brand name always visible in the upper-left corner */
-.brand-photographer{
-  width:auto!important;
-  max-width:none!important;
-  flex:1 1 auto!important;
-  min-width:0!important;
-  display:flex!important;
-  align-items:baseline;
-  justify-content:flex-start!important;
-  gap:6px;
-  white-space:nowrap;
-  overflow:visible!important;
-  font-family:Georgia,"Times New Roman",serif!important;
-  font-weight:400!important;
-  letter-spacing:.01em!important;
-  line-height:1!important;
-  text-align:left!important;
-}
-.brand-photographer .brand-name{
-  flex:0 0 auto;
-  font-size:14px;
-  letter-spacing:.055em;
-  white-space:nowrap;
-}
-.brand-photographer .brand-sep{
-  flex:0 0 auto;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:12px;
-  color:var(--gold);
-  opacity:.95;
-  white-space:nowrap;
-}
-.brand-photographer .brand-role{
-  flex:0 0 auto;
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:8px;
-  letter-spacing:.16em;
-  color:#c9b38a;
-  font-weight:500;
-  white-space:nowrap;
-}
+<style id="v30-brand-journal-css">
+.brand-photographer{display:flex!important;align-items:baseline;gap:8px;white-space:nowrap;font-family:Georgia,"Times New Roman",serif!important;font-weight:400!important;letter-spacing:.02em!important;line-height:1!important;}
+.brand-photographer .brand-name{font-size:15px;letter-spacing:.08em;}
+.brand-photographer .brand-sep{font-size:13px;color:var(--gold);opacity:.9;}
+.brand-photographer .brand-role{font-family:Arial,Helvetica,sans-serif;font-size:9px;letter-spacing:.28em;color:#c9b38a;font-weight:500;}
 .journal-gallery-lead{max-width:700px;margin:0 auto 24px;color:#cfcfcf;font-size:16px;line-height:1.7;}
-@media(max-width:1050px){
-  .nav{gap:12px;}
-  .brand-photographer{gap:5px;}
-  .brand-photographer .brand-name{font-size:13px;letter-spacing:.045em;}
-  .brand-photographer .brand-sep{font-size:11px;}
-  .brand-photographer .brand-role{font-size:7px;letter-spacing:.12em;}
-}
 @media(max-width:620px){
-  .wrap.nav{padding-left:8px!important;padding-right:8px!important;}
-  .nav{gap:8px!important;}
-  .brand-photographer{gap:4px;}
-  .brand-photographer .brand-name{font-size:11px;letter-spacing:.035em;}
-  .brand-photographer .brand-sep{font-size:10px;}
-  .brand-photographer .brand-role{font-size:6.5px;letter-spacing:.09em;}
-  .menu-toggle{flex:0 0 auto!important;min-width:78px!important;padding-left:9px!important;padding-right:9px!important;}
+  .brand-photographer{gap:5px;}
+  .brand-photographer .brand-name{font-size:12px;letter-spacing:.06em;}
+  .brand-photographer .brand-sep{font-size:11px;}
+  .brand-photographer .brand-role{font-size:7px;letter-spacing:.18em;}
   .journal-gallery-lead{font-size:15px;}
 }
 </style>
