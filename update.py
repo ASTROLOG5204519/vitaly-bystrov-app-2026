@@ -7,7 +7,7 @@ from datetime import datetime
 SITE_URL = "https://vitalibystrov.mypixieset.com/"
 DATA_FILE = "data.json"
 
-def main():
+def main ():
     print("Проверяем сайт...")
     
         headers = {
