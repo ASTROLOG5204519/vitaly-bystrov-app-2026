@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Запустить скрипт
-        run: python scraper.py
+        run: python update.py
 
             - name: Сохранить изменения в data.json
         run: |
