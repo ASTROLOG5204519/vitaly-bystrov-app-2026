@@ -1,3 +1,5 @@
+V27 — JOURNAL updated with embedded YouTube video: https://www.youtube.com/watch?v=ZrSl7YH0XeE
+
 # VITALY BYSTROV APP v12
 
 Переработанная структура приложения по актуальному сайту VITALY BYSTROV.
