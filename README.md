@@ -1,3 +1,3 @@
-VITALY BYSTROV APP v33
+VITALY BYSTROV APP v35
 
-Updates: softer rounded buttons, simplified TikTok page with logo-style lockup and CTA, clean Journal image without embedded text.
+V35 adds a RU / EN / KA flag language switcher below the MENU button and translates the main interface/core pages. Legal agreement documents remain in Russian for now. INFO content was not fabricated because the live Pixieset site could not be retrieved from the current environment; provide the updated INFO screenshot/text to sync it exactly.
