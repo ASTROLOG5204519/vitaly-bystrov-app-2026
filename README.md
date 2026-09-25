@@ -1,3 +1,8 @@
-VITALY BYSTROV APP v35
+VITALY BYSTROV APP v41 — Vi-Chat as a dedicated top-level menu section.
 
-V35 adds a RU / EN / KA flag language switcher below the MENU button and translates the main interface/core pages. Legal agreement documents remain in Russian for now. INFO content was not fabricated because the live Pixieset site could not be retrieved from the current environment; provide the updated INFO screenshot/text to sync it exactly.
+Changes from v40:
+- Added top-level menu item: 🗣️ Vi-Chat.
+- Vi-Chat opens as an internal app page with the Botpress chat embedded.
+- Added fallback button to open the Botpress chat separately.
+- Removed Vi-Chat from the CONTACT submenu.
+- Preserved CONTACT Telegram button, WhatsApp reservation button, RU/EN/GE switcher, and all previous V40 content.
