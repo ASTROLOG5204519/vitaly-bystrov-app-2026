@@ -1,4 +1,3 @@
-VITALY BYSTROV APP v32
-- Brand header: VITALY BYSTROV | PHOTOGRAPHER uses matching serif typography and equal visual height.
-- JOURNAL: added a dedicated Best Sessions card image above the personal gallery block.
-- Existing V29 expandable Portfolio/Info navigation preserved.
+VITALY BYSTROV APP v33
+
+Updates: softer rounded buttons, simplified TikTok page with logo-style lockup and CTA, clean Journal image without embedded text.
