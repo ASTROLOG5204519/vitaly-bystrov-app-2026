@@ -128,6 +128,13 @@ header{z-index:1000}
 .vichat-float-frame{width:100%;height:calc(100% - 58px);display:block;border:0;background:#fff}
 @media(max-width:620px){.vichat-float{right:14px;bottom:14px}.vichat-float-btn{width:58px;height:58px}.vichat-float-window{right:10px;bottom:82px;width:calc(100vw - 20px);height:calc(100vh - 105px);min-height:460px;border-radius:15px}.vichat-float-bubble{display:none!important}}
 
+
+/* V45 — robust floating Vi-Chat interaction */
+#vichatFloat{pointer-events:none !important;z-index:2147483000 !important;}
+#vichatFloatBtn,#vichatFloatBubble{pointer-events:auto !important;}
+#vichatFloatBtn{position:relative;z-index:2147483002 !important;}
+#vichatFloatWindow{pointer-events:auto !important;z-index:2147483001 !important;}
+#vichatFloatClose{pointer-events:auto !important;position:relative;z-index:2147483003 !important;}
 </style>
 <style id="v26-home-polish-css">
 /* V26 — final HOME visual polish: editorial spacing, restrained scale, consistent rhythm */
@@ -428,7 +435,7 @@ header{z-index:1000}
 <section class="page menu-page" id="page-contact"><div class="page-head site-head"><div class="wrap"><div class="eyebrow">CONTACT</div><h1>ДАВАЙТЕ СОЗДАДИМ ЭТО ВМЕСТЕ.</h1><p>Расскажите о своей идее — я помогу воплотить её в фотографии.</p></div></div><section class="section"><div class="wrap section-grid"><div><h2>Связь со мной</h2><p class="note">Я стараюсь отвечать на все запросы как можно скорее.</p><p>Email: <a href="mailto:bistroff84@mail.ru">bistroff84@mail.ru</a><br/>Phone: <a href="tel:+995550508053">+995 550 50 80 53</a></p><p class="contact-instagram"><a href="https://www.instagram.com/vitaly_bistr.off/" rel="noopener" target="_blank">INSTAGRAM · @vitaly_bistr.off</a></p><a class="btn contact-telegram-btn" href="https://t.me/bistrof_bot" rel="noopener" target="_blank">Написать AI-ассистенту в Telegram</a></div><div class="copy"><form class="contact-form" id="contactForm"><label>Ваше имя<input autocomplete="name" name="name" required=""/></label><label>Email<input autocomplete="email" name="email" required="" type="email"/></label><label>Сообщение<textarea name="message" required="" rows="7"></textarea></label><button class="btn" type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button><p class="note">Сообщение будет подготовлено для отправки на bistroff84@mail.ru.</p></form><h3 class="faq-title">FAQ</h3><p><strong>Как проходит фотосессия?</strong><br/>После знакомства мы обсуждаем идею, формат, место и детали съёмки. Во время фотосессии я помогаю с позированием, светом и настроением кадра, чтобы вы чувствовали себя естественно и уверенно перед камерой.</p><p><strong>Можно ли обратиться, если я ещё не определился с датой?</strong><br/>Конечно. Вы можете связаться со мной заранее, даже если дата или идея съёмки пока не определены. Мы обсудим ваши пожелания и вместе подберём подходящий формат.</p><p><strong>Возможна ли съёмка за пределами Тбилиси?</strong><br/>Да. Я открыт к съёмкам в других городах и локациях Грузии. Возможность и условия выезда обсуждаются индивидуально в зависимости от места и формата съёмки.</p></div></div></section></section></main>
 <div class="vichat-float" id="vichatFloat">
   <div class="vichat-float-bubble" id="vichatFloatBubble">Привет! 👋 Я Vi-Chat. Нужна помощь?</div>
-  <button class="vichat-float-btn" id="vichatFloatBtn" type="button" aria-label="Открыть Vi-Chat" aria-expanded="false">
+  <button class="vichat-float-btn" id="vichatFloatBtn" type="button" data-no-lightbox="true" aria-label="Открыть Vi-Chat" aria-expanded="false">
     <img src="https://images-pw.pixieset.com/elementfield/v1XyK19/photo_2026-09-19_01-31-55-49646feb-1500.jpg" alt="Vi-Chat"/>
   </button>
 </div>
@@ -618,4 +625,43 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js?v=19').
 })();
 </script>
 
+
+<script id="v45-vichat-floating-js">
+(function(){
+  const btn=document.getElementById('vichatFloatBtn');
+  const win=document.getElementById('vichatFloatWindow');
+  const close=document.getElementById('vichatFloatClose');
+  if(!btn || !win || !close) return;
+  function openChat(){
+    win.classList.add('open');
+    win.setAttribute('aria-hidden','false');
+    btn.setAttribute('aria-expanded','true');
+    win.style.setProperty('display','block','important');
+    document.body.classList.add('vichat-open');
+  }
+  function closeChat(){
+    win.classList.remove('open');
+    win.setAttribute('aria-hidden','true');
+    btn.setAttribute('aria-expanded','false');
+    win.style.setProperty('display','none','important');
+    document.body.classList.remove('vichat-open');
+  }
+  function toggleChat(){
+    if(win.classList.contains('open')) closeChat(); else openChat();
+  }
+  // Capture-phase listener prevents other document handlers from swallowing the click.
+  document.addEventListener('click',function(e){
+    if(e.target===btn || btn.contains(e.target)){
+      e.preventDefault(); e.stopPropagation(); toggleChat(); return;
+    }
+    if(e.target===close || close.contains(e.target)){
+      e.preventDefault(); e.stopPropagation(); closeChat(); return;
+    }
+  },true);
+  btn.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();toggleChat();};
+  close.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();closeChat();};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape' && win.classList.contains('open')) closeChat();});
+  window.vichatOpen=openChat; window.vichatClose=closeChat; window.vichatToggle=toggleChat;
+})();
+</script>
 </body></html>
