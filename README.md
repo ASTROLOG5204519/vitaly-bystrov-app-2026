@@ -1,8 +1,8 @@
-VITALY BYSTROV APP v41 — Vi-Chat as a dedicated top-level menu section.
+VITALY BYSTROV APP v46
 
-Changes from v40:
-- Added top-level menu item: 🗣️ Vi-Chat.
-- Vi-Chat opens as an internal app page with the Botpress chat embedded.
-- Added fallback button to open the Botpress chat separately.
-- Removed Vi-Chat from the CONTACT submenu.
-- Preserved CONTACT Telegram button, WhatsApp reservation button, RU/EN/GE switcher, and all previous V40 content.
+Changes:
+- Removed paid Vi-Chat from menu and app.
+- Removed floating Vi-Chat assistant.
+- Removed Telegram AI-assistant button from CONTACT.
+- Replaced JOURNAL personal gallery image with a color photography image.
+- Preserved the rest of the V45 app.
