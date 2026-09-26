@@ -290,6 +290,30 @@ header{z-index:1000}
 .presets-card{text-align:center}.presets-portrait{display:block;width:min(520px,100%);max-height:620px;object-fit:cover;object-position:center top;margin:28px auto 4px;border:0;border-radius:14px;box-shadow:0 18px 45px rgba(0,0,0,.28)}.presets-card .btn{margin-top:24px}
 @media(max-width:620px){.presets-portrait{max-height:480px;border-radius:12px}.tiktok-simple{padding-top:52px!important}}
 </style>
+
+<style id="v47-info-pages">
+.info-content{max-width:980px}
+.info-intro{max-width:760px;margin:0 auto 42px;text-align:center;color:#d3d0c9;font-size:17px;line-height:1.8}
+.info-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0}
+.info-card{border:1px solid #34312a;background:linear-gradient(145deg,#11110f,#090909);padding:28px 26px}
+.info-card h2,.info-card h3{font-family:Georgia,serif;font-weight:400;color:#e5d2a5;margin:0 0 14px}
+.info-card h2{font-size:27px}.info-card h3{font-size:23px}
+.info-card p,.info-card li{color:#d1cec6;line-height:1.75}
+.info-card ul{padding-left:20px}
+.info-note{color:#aaa!important;font-size:13px;line-height:1.7}
+.info-cta{text-align:center;margin:38px auto 0}
+.info-cta p{color:#aaa;line-height:1.7}
+.info-price{font-family:Georgia,serif;font-size:21px;color:#e5d2a5;margin:12px 0}
+.info-steps{counter-reset:steps;list-style:none;padding:0;margin:0}
+.info-steps li{counter-increment:steps;position:relative;padding:0 0 22px 48px}
+.info-steps li:before{content:counter(steps,decimal-leading-zero);position:absolute;left:0;top:0;color:var(--gold);font-size:13px;letter-spacing:.1em}
+.info-doc{border:1px solid #333;background:#0c0c0c;margin:12px 0}
+.info-doc summary{cursor:pointer;padding:20px 24px;color:#e5d2a5;letter-spacing:.06em}
+.info-doc .info-doc-body{padding:0 24px 22px;color:#c9c6bf;line-height:1.75}
+.journal-gallery-card{object-fit:cover!important;object-position:center center!important;display:block;margin-left:auto!important;margin-right:auto!important}
+@media(max-width:700px){.info-cards{grid-template-columns:1fr}.info-card{padding:23px 20px}.info-intro{font-size:16px}.info-doc summary{padding:17px}.info-doc .info-doc-body{padding:0 17px 18px}}
+</style>
+
 </head>
 <body>
 <header><div class="wrap nav"><button class="brand navbtn brand-photographer" data-page="home"><span class="brand-name">VITALY BYSTROV</span><span class="brand-sep">|</span><span class="brand-role">PHOTOGRAPHER</span></button><button aria-label="Открыть меню" class="menu-toggle" id="menuToggle">MENU</button><nav class="mainnav" id="mainNav"><div class="navgrid">
@@ -403,7 +427,74 @@ header{z-index:1000}
 <section class="section journal-gallery-section"><div class="wrap narrow"><div class="gallery-feature"><div class="gallery-feature-copy"><img class="journal-gallery-card" src="journal-personal-gallery.png" alt="Личная галерея — VITALY BYSTROV"/><div class="eyebrow">VITALY BYSTROV</div><h2>Лучшие фотосессии</h2><p class="journal-gallery-lead">Моя личная галерея — избранные фотографии, места и фотосессии.</p><a class="btn" href="https://bistroffphoto.gallery.photo/" rel="noopener" target="_blank">ОТКРЫТЬ ЛИЧНУЮ ГАЛЕРЕЮ</a></div></div></div></section>
 </section>
 <section class="page menu-page" id="page-tiktok"><section class="section tiktok-simple"><div class="wrap narrow social-page"><div class="tiktok-lockup" aria-label="TikTok"><svg class="tiktok-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40.2 8.5c2.3 5.5 6.2 8.9 12.3 9.5v8.4c-4.2-.1-8.1-1.3-11.8-3.7v19.1c0 8.7-6.7 14.2-14.8 14.2-7.5 0-13.4-5.2-13.4-12.4 0-7.5 6.2-12.7 14.5-12.7 1 0 2 .1 3 .3v8.1c-.9-.3-1.9-.5-2.9-.5-3.5 0-6.3 2-6.3 5.1 0 2.8 2.3 4.8 5.3 4.8 3.7 0 6.2-2.4 6.2-7V8.5h7.9z" fill="#25F4EE" opacity=".92" transform="translate(-2,1)"/><path d="M40.2 8.5c2.3 5.5 6.2 8.9 12.3 9.5v8.4c-4.2-.1-8.1-1.3-11.8-3.7v19.1c0 8.7-6.7 14.2-14.8 14.2-7.5 0-13.4-5.2-13.4-12.4 0-7.5 6.2-12.7 14.5-12.7 1 0 2 .1 3 .3v8.1c-.9-.3-1.9-.5-2.9-.5-3.5 0-6.3 2-6.3 5.1 0 2.8 2.3 4.8 5.3 4.8 3.7 0 6.2-2.4 6.2-7V8.5h7.9z" fill="#FE2C55" opacity=".92" transform="translate(2,-1)"/><path d="M40.2 8.5c2.3 5.5 6.2 8.9 12.3 9.5v8.4c-4.2-.1-8.1-1.3-11.8-3.7v19.1c0 8.7-6.7 14.2-14.8 14.2-7.5 0-13.4-5.2-13.4-12.4 0-7.5 6.2-12.7 14.5-12.7 1 0 2 .1 3 .3v8.1c-.9-.3-1.9-.5-2.9-.5-3.5 0-6.3 2-6.3 5.1 0 2.8 2.3 4.8 5.3 4.8 3.7 0 6.2-2.4 6.2-7V8.5h7.9z" fill="#fff"/></svg><span>TikTok</span></div><a class="btn tiktok-btn" href="https://www.tiktok.com/@vitaly_bistroff" rel="noopener" target="_blank">ОТКРЫТЬ TIKTOK</a></div></section></section>
-<section class="page menu-page" id="page-contact"><div class="page-head site-head"><div class="wrap"><div class="eyebrow">CONTACT</div><h1>ДАВАЙТЕ СОЗДАДИМ ЭТО ВМЕСТЕ.</h1><p>Расскажите о своей идее — я помогу воплотить её в фотографии.</p></div></div><section class="section"><div class="wrap section-grid"><div><h2>Связь со мной</h2><p class="note">Я стараюсь отвечать на все запросы как можно скорее.</p><p>Email: <a href="mailto:bistroff84@mail.ru">bistroff84@mail.ru</a><br/>Phone: <a href="tel:+995550508053">+995 550 50 80 53</a></p><p class="contact-instagram"><a href="https://www.instagram.com/vitaly_bistr.off/" rel="noopener" target="_blank">INSTAGRAM · @vitaly_bistr.off</a></p></div><div class="copy"><form class="contact-form" id="contactForm"><label>Ваше имя<input autocomplete="name" name="name" required=""/></label><label>Email<input autocomplete="email" name="email" required="" type="email"/></label><label>Сообщение<textarea name="message" required="" rows="7"></textarea></label><button class="btn" type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button><p class="note">Сообщение будет подготовлено для отправки на bistroff84@mail.ru.</p></form><h3 class="faq-title">FAQ</h3><p><strong>Как проходит фотосессия?</strong><br/>После знакомства мы обсуждаем идею, формат, место и детали съёмки. Во время фотосессии я помогаю с позированием, светом и настроением кадра, чтобы вы чувствовали себя естественно и уверенно перед камерой.</p><p><strong>Можно ли обратиться, если я ещё не определился с датой?</strong><br/>Конечно. Вы можете связаться со мной заранее, даже если дата или идея съёмки пока не определены. Мы обсудим ваши пожелания и вместе подберём подходящий формат.</p><p><strong>Возможна ли съёмка за пределами Тбилиси?</strong><br/>Да. Я открыт к съёмкам в других городах и локациях Грузии. Возможность и условия выезда обсуждаются индивидуально в зависимости от места и формата съёмки.</p></div></div></section></section></main>
+<section class="page menu-page" id="page-contact"><div class="page-head site-head"><div class="wrap"><div class="eyebrow">CONTACT</div><h1>ДАВАЙТЕ СОЗДАДИМ ЭТО ВМЕСТЕ.</h1><p>Расскажите о своей идее — я помогу воплотить её в фотографии.</p></div></div><section class="section"><div class="wrap section-grid"><div><h2>Связь со мной</h2><p class="note">Я стараюсь отвечать на все запросы как можно скорее.</p><p>Email: <a href="mailto:bistroff84@mail.ru">bistroff84@mail.ru</a><br/>Phone: <a href="tel:+995550508053">+995 550 50 80 53</a></p><p class="contact-instagram"><a href="https://www.instagram.com/vitaly_bistr.off/" rel="noopener" target="_blank">INSTAGRAM · @vitaly_bistr.off</a></p></div><div class="copy"><form class="contact-form" id="contactForm"><label>Ваше имя<input autocomplete="name" name="name" required=""/></label><label>Email<input autocomplete="email" name="email" required="" type="email"/></label><label>Сообщение<textarea name="message" required="" rows="7"></textarea></label><button class="btn" type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button><p class="note">Сообщение будет подготовлено для отправки на bistroff84@mail.ru.</p></form><h3 class="faq-title">FAQ</h3><p><strong>Как проходит фотосессия?</strong><br/>После знакомства мы обсуждаем идею, формат, место и детали съёмки. Во время фотосессии я помогаю с позированием, светом и настроением кадра, чтобы вы чувствовали себя естественно и уверенно перед камерой.</p><p><strong>Можно ли обратиться, если я ещё не определился с датой?</strong><br/>Конечно. Вы можете связаться со мной заранее, даже если дата или идея съёмки пока не определены. Мы обсудим ваши пожелания и вместе подберём подходящий формат.</p><p><strong>Возможна ли съёмка за пределами Тбилиси?</strong><br/>Да. Я открыт к съёмкам в других городах и локациях Грузии. Возможность и условия выезда обсуждаются индивидуально в зависимости от места и формата съёмки.</p></div></div></section></section>
+<section class="page menu-page" id="page-reservation">
+  <div class="page-head site-head"><div class="wrap"><div class="eyebrow">INFO · BOOKING</div><h1>RESERVATION</h1><p>Запланируем фотосессию, которая будет отражать именно вашу историю.</p></div></div>
+  <section class="section"><div class="wrap info-content">
+    <p class="info-intro">Чтобы обсудить съёмку, расскажите мне о желаемой дате, формате и идее. Мы согласуем детали, место и удобное время.</p>
+    <div class="info-cards">
+      <article class="info-card"><h2>Как забронировать</h2><ol class="info-steps"><li>Выберите желаемую дату и формат съёмки.</li><li>Напишите мне и расскажите о своей идее.</li><li>Обсудим локацию, продолжительность и условия.</li><li>После согласования деталей подтвердим запись.</li></ol></article>
+      <article class="info-card"><h2>Перед съёмкой</h2><ul><li>Можно заранее обсудить образы и референсы.</li><li>Помогу подобрать локацию в Тбилиси.</li><li>Во время съёмки подскажу с позированием.</li><li>Если планы изменятся, пожалуйста, сообщите заранее.</li></ul></article>
+    </div>
+    <div class="info-cta"><button class="btn" data-page="contact">ЗАПРОСИТЬ ДАТУ</button></div>
+  </div></section>
+</section>
+
+<section class="page menu-page" id="page-clients">
+  <div class="page-head site-head"><div class="wrap"><div class="eyebrow">INFO · CLIENT GUIDE</div><h1>КЛИЕНТЫ</h1><p>Небольшой гид, чтобы подготовка к фотосессии прошла спокойно и комфортно.</p></div></div>
+  <section class="section"><div class="wrap info-content">
+    <p class="info-intro">Не обязательно уметь позировать. Моя задача — помочь вам чувствовать себя естественно и сохранить ваши настоящие эмоции.</p>
+    <div class="info-cards">
+      <article class="info-card"><h2>До фотосессии</h2><ul><li>Подумайте, какое настроение и стиль вам близки.</li><li>Выберите удобную одежду, в которой чувствуете себя уверенно.</li><li>Обсудим локацию, время и детали заранее.</li></ul></article>
+      <article class="info-card"><h2>Во время съёмки</h2><ul><li>Я подскажу, как встать, куда посмотреть и как двигаться.</li><li>Можно делать паузы и менять идеи по ходу съёмки.</li><li>Самое важное — быть собой и получать удовольствие от процесса.</li></ul></article>
+      <article class="info-card"><h2>После съёмки</h2><p>Сроки обработки и способ передачи готовых фотографий согласуем заранее. Все важные детали обсудим до начала съёмки.</p></article>
+      <article class="info-card"><h2>Есть вопросы?</h2><p>Напишите мне, если хотите уточнить подготовку, локацию или формат съёмки.</p><button class="btn" data-page="contact">СВЯЗАТЬСЯ</button></article>
+    </div>
+  </div></section>
+</section>
+
+<section class="page menu-page" id="page-prices">
+  <div class="page-head site-head"><div class="wrap"><div class="eyebrow">INFO · SERVICES</div><h1>ПРАЙСЫ</h1><p>Форматы фотосъёмки</p></div></div>
+  <section class="section"><div class="wrap info-content">
+    <p class="info-intro">Подбираю формат съёмки под вашу задачу: от индивидуального портрета до семейной или творческой истории. Итоговая стоимость зависит от выбранного формата, продолжительности и локации.</p>
+    <div class="info-cards">
+      <article class="info-card"><h2>Индивидуальная съёмка</h2><p>Портретная фотосессия для личных фотографий, обновления портфолио или особенного настроения.</p><p class="info-price">Стоимость по запросу</p></article>
+      <article class="info-card"><h2>Love Story и пары</h2><p>Живая история вдвоём — прогулка, романтическая съёмка или памятный день.</p><p class="info-price">Стоимость по запросу</p></article>
+      <article class="info-card"><h2>Семейная съёмка</h2><p>Тёплые фотографии семьи, детей и важных моментов вместе.</p><p class="info-price">Стоимость по запросу</p></article>
+      <article class="info-card"><h2>Творческие и событийные проекты</h2><p>Съёмки для личных проектов, контента, мероприятий и индивидуальных идей.</p><p class="info-price">Стоимость по запросу</p></article>
+    </div>
+    <div class="info-cta"><p>Напишите, какой формат вас интересует, — я уточню стоимость, сроки и условия.</p><button class="btn" data-page="contact">УЗНАТЬ СТОИМОСТЬ</button></div>
+  </div></section>
+</section>
+
+<section class="page menu-page" id="page-agreements">
+  <div class="page-head site-head"><div class="wrap"><div class="eyebrow">INFO · TERMS</div><h1>СОГЛАШЕНИЯ</h1><p>Основные вопросы, которые важно согласовать до съёмки.</p></div></div>
+  <section class="section"><div class="wrap info-content">
+    <p class="info-intro">Чтобы ожидания совпадали, все существенные условия фотосессии лучше обсудить и подтвердить заранее.</p>
+    <details class="info-doc"><summary>Формат и стоимость съёмки</summary><div class="info-doc-body"><p>До начала съёмки согласуются формат, дата, место, продолжительность, стоимость и порядок оплаты.</p></div></details>
+    <details class="info-doc"><summary>Отбор и обработка фотографий</summary><div class="info-doc-body"><p>Количество готовых фотографий, способ отбора, характер обработки и срок передачи результата согласуются индивидуально до съёмки.</p></div></details>
+    <details class="info-doc"><summary>Перенос или отмена</summary><div class="info-doc-body"><p>Если необходимо перенести или отменить съёмку, пожалуйста, сообщите об этом как можно раньше. Условия переноса и возврата оплаты обсуждаются при бронировании.</p></div></details>
+    <details class="info-doc"><summary>Публикация фотографий</summary><div class="info-doc-body"><p>Вопрос публикации фотографий в портфолио и социальных сетях обсуждается отдельно. Если вы не хотите, чтобы снимки публиковались, сообщите об этом заранее.</p></div></details>
+    <p class="info-note">Этот раздел содержит общую информацию, а не индивидуальный договор. Конкретные условия необходимо согласовать перед бронированием.</p>
+    <div class="info-cta"><button class="btn" data-page="contact">ЗАДАТЬ ВОПРОС</button></div>
+  </div></section>
+</section>
+
+<section class="page menu-page" id="page-presets">
+  <div class="page-head site-head"><div class="wrap"><div class="eyebrow">INFO · PHOTO EDITING</div><h1>PRESETS</h1><p>Цвет, настроение и характер фотографии.</p></div></div>
+  <section class="section"><div class="wrap info-content">
+    <p class="info-intro">Фотографические пресеты помогают создавать цельное настроение снимков: от мягких естественных оттенков до выразительного кинематографичного цвета.</p>
+    <div class="info-cards">
+      <article class="info-card"><h2>Cinematic</h2><p>Выразительные тени, глубокие оттенки и атмосферная цветовая подача.</p></article>
+      <article class="info-card"><h2>Portrait</h2><p>Сдержанная обработка портретов с вниманием к естественному тону кожи.</p></article>
+      <article class="info-card"><h2>Warm Light</h2><p>Тёплая, мягкая цветовая атмосфера для фотографий с естественным светом.</p></article>
+      <article class="info-card"><h2>Индивидуальный стиль</h2><p>Если вас интересует обработка или пресеты, напишите мне — обсудим доступные варианты.</p><button class="btn" data-page="contact">ЗАДАТЬ ВОПРОС</button></article>
+    </div>
+    <p class="info-note">Информация о наличии пресетов, совместимости и условиях приобретения предоставляется отдельно.</p>
+  </div></section>
+</section>
+
+</main>
 
 <script id="v46-navigation-fix">
 (function(){
