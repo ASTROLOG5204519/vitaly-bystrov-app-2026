@@ -205,7 +205,7 @@ header{z-index:1000}
 .tiktok-lockup{display:flex;align-items:center;justify-content:center;gap:18px;margin:10px auto 30px;color:#f4f0e8;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,72px);line-height:1;font-weight:400;letter-spacing:.01em}.tiktok-icon{width:64px;height:64px;flex:0 0 64px;filter:drop-shadow(0 8px 24px rgba(0,0,0,.3))}.tiktok-btn{min-width:190px;text-align:center}@media(max-width:620px){.tiktok-lockup{gap:12px;font-size:48px}.tiktok-icon{width:52px;height:52px;flex-basis:52px}}
 </style>
 
-<meta name="app-version" content="V39 — Vi-Chat in Contact + WhatsApp reservation button + V38 languages"><!-- V27 + V28 + V29 -->
+<meta name="app-version" content="V48 — Telegram Contact + Journal cover + refined red MENU + V39 base"><!-- V27 + V28 + V29 -->
 
 <style id="v27-journal-video">
 .journal-video{width:100%;max-width:920px;margin:0 auto;background:#050505;position:relative;aspect-ratio:16/9;overflow:hidden}
@@ -238,8 +238,6 @@ header{z-index:1000}
   font-size:14px;
   letter-spacing:.055em;
   white-space:nowrap;
-  -webkit-text-stroke:0.55px #b026ff;
-  text-shadow:0 0 4px rgba(176,38,255,.95),0 0 10px rgba(176,38,255,.78),0 0 20px rgba(176,38,255,.48);
 }
 .brand-photographer .brand-sep{
   flex:0 0 auto;
@@ -248,8 +246,6 @@ header{z-index:1000}
   color:var(--gold);
   opacity:.95;
   white-space:nowrap;
-  -webkit-text-stroke:0.45px #b026ff;
-  text-shadow:0 0 4px rgba(176,38,255,.95),0 0 10px rgba(176,38,255,.72),0 0 18px rgba(176,38,255,.42);
 }
 .brand-photographer .brand-role{
   flex:0 0 auto;
@@ -259,10 +255,8 @@ header{z-index:1000}
   color:#c9b38a;
   font-weight:400;
   white-space:nowrap;
-  -webkit-text-stroke:0.55px #b026ff;
-  text-shadow:0 0 4px rgba(176,38,255,.95),0 0 10px rgba(176,38,255,.78),0 0 20px rgba(176,38,255,.48);
 }
-.journal-gallery-card{width:100%;max-width:520px;margin:0 auto 30px;display:block;object-fit:cover;object-position:center;aspect-ratio:1/1;border:1px solid rgba(199,170,115,.35);box-shadow:0 18px 50px rgba(0,0,0,.32);}
+.journal-gallery-card{width:100%;max-width:520px;margin:0 auto 30px;display:block;object-fit:contain;object-position:center;aspect-ratio:auto;border:1px solid rgba(199,170,115,.35);box-shadow:0 18px 50px rgba(0,0,0,.32);background:#0b0b0b;}
 .journal-gallery-lead{max-width:700px;margin:0 auto 24px;color:#cfcfcf;font-size:16px;line-height:1.7;}
 @media(max-width:1050px){
   .nav{gap:12px;}
@@ -287,26 +281,152 @@ header{z-index:1000}
 .tiktok-simple{padding-top:78px!important}.tiktok-simple .tiktok-lockup{margin-top:0}.tiktok-simple .tiktok-btn{margin-top:12px}
 .presets-card{text-align:center}.presets-portrait{display:block;width:min(520px,100%);max-height:620px;object-fit:cover;object-position:center top;margin:28px auto 4px;border:0;border-radius:14px;box-shadow:0 18px 45px rgba(0,0,0,.28)}.presets-card .btn{margin-top:24px}
 @media(max-width:620px){.presets-portrait{max-height:480px;border-radius:12px}.tiktok-simple{padding-top:52px!important}}
+</style>
 
-/* VITALY BYSTROV — neon purple outline */
+<style id="v48-menu-style">
+/* V48 — refined main MENU button */
+.menu-toggle{
+  color:#c93636 !important;
+  font-weight:700 !important;
+  letter-spacing:.16em;
+  border-color:#4a2525;
+  text-shadow:0 0 10px rgba(201,54,54,.12);
+}
+.menu-toggle:hover{
+  color:#f05a5a !important;
+  border-color:#7a3030;
+  background:#120b0b;
+}
+</style>
+
+<style id="v27-neon-menu-polish">
+/* V27 — purple brand neon + red MENU + white active navigation */
 .brand-photographer{
-  position:relative!important;
-  padding:8px 13px!important;
-  border:1px solid rgba(176,38,255,.82)!important;
-  border-radius:10px!important;
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:max-content!important;
+  max-width:100%;
+  height:auto!important;
+  min-width:0!important;
+  margin:0;
+  padding:10px 18px!important;
+  border:2px solid #b45cff!important;
+  border-radius:12px!important;
+  background:rgba(20,4,34,.42)!important;
+  color:#fff!important;
+  font-family:Inter,Arial,sans-serif!important;
+  font-size:18px!important;
+  font-weight:900!important;
+  line-height:1.15!important;
+  letter-spacing:.12em!important;
+  white-space:nowrap!important;
+  text-align:center!important;
   box-shadow:
-    0 0 5px rgba(176,38,255,.88),
-    0 0 12px rgba(176,38,255,.58),
-    0 0 24px rgba(176,38,255,.32),
-    inset 0 0 8px rgba(176,38,255,.10)!important;
+    0 0 5px rgba(180,92,255,.95),
+    0 0 14px rgba(180,92,255,.9),
+    0 0 30px rgba(128,35,255,.58),
+    inset 0 0 10px rgba(180,92,255,.28)!important;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 9px #b45cff,
+    0 0 18px #8a2be2!important;
+  cursor:pointer;
+}
+.brand-photographer:hover,.brand-photographer.active{
+  color:#fff!important;
+  border-color:#d18aff!important;
+  background:rgba(28,7,46,.52)!important;
+  box-shadow:
+    0 0 7px rgba(210,138,255,1),
+    0 0 18px rgba(180,92,255,1),
+    0 0 38px rgba(128,35,255,.72),
+    inset 0 0 13px rgba(210,138,255,.35)!important;
+}
+.brand-photographer .brand-name,.brand-photographer .brand-role{
+  color:#fff!important;
+  font-weight:900!important;
+}
+.brand-photographer .brand-sep{
+  color:#d18aff!important;
+  font-weight:900!important;
+  margin:0 .32em;
+  text-shadow:0 0 5px #fff,0 0 12px #b45cff,0 0 22px #8a2be2!important;
+}
+#menuToggle.menu-toggle{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:max-content!important;
+  min-width:108px!important;
+  height:44px!important;
+  padding:8px 18px!important;
+  border:2px solid #ff3030!important;
+  border-radius:10px!important;
+  background:rgba(45,0,0,.35)!important;
+  color:#fff!important;
+  font-family:Inter,Arial,sans-serif!important;
+  font-size:15px!important;
+  font-weight:900!important;
+  letter-spacing:.16em!important;
+  text-shadow:0 0 5px #fff,0 0 11px #ff3030,0 0 20px #ff1010!important;
+  box-shadow:
+    0 0 5px rgba(255,48,48,.98),
+    0 0 14px rgba(255,48,48,.9),
+    0 0 28px rgba(255,0,0,.52),
+    inset 0 0 10px rgba(255,48,48,.28)!important;
+  cursor:pointer;
+}
+#menuToggle.menu-toggle:hover,#menuToggle.menu-toggle[aria-expanded="true"]{
+  border-color:#ff7777!important;
+  background:rgba(65,0,0,.48)!important;
+  box-shadow:
+    0 0 7px #ff5555,
+    0 0 20px #ff3030,
+    0 0 38px rgba(255,0,0,.72),
+    inset 0 0 13px rgba(255,80,80,.35)!important;
+}
+.mainnav .navbtn{
+  font-weight:800!important;
+}
+.mainnav .navbtn:hover{
+  color:#fff!important;
+  text-shadow:0 0 5px #fff,0 0 11px rgba(255,255,255,.95)!important;
+}
+.mainnav .navbtn.active{
+  color:#fff!important;
+  border-color:#f5f5f5!important;
+  background:rgba(255,255,255,.045)!important;
+  font-weight:900!important;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 9px #fff,
+    0 0 18px rgba(255,255,255,.95)!important;
+  box-shadow:
+    0 0 5px rgba(255,255,255,.95),
+    0 0 13px rgba(255,255,255,.8),
+    inset 0 0 8px rgba(255,255,255,.12)!important;
+}
+.portfolio-sub button.active{
+  color:#fff!important;
+  background:rgba(255,255,255,.045)!important;
+  font-weight:900!important;
+  text-shadow:0 0 4px #fff,0 0 10px #fff,0 0 18px rgba(255,255,255,.9)!important;
+  box-shadow:0 0 5px rgba(255,255,255,.9),0 0 12px rgba(255,255,255,.7)!important;
+}
+@media(max-width:1050px){
+  .brand-photographer{font-size:16px!important;padding:9px 14px!important;letter-spacing:.09em!important}
+  #menuToggle.menu-toggle{font-size:14px!important;min-width:100px!important;height:42px!important}
 }
 @media(max-width:620px){
-  .brand-photographer{padding:6px 9px!important;border-radius:8px!important;}
+  .nav{gap:10px}
+  .brand-photographer{font-size:11px!important;letter-spacing:.055em!important;padding:8px 10px!important;border-radius:9px!important}
+  #menuToggle.menu-toggle{font-size:11px!important;letter-spacing:.12em!important;min-width:76px!important;height:38px!important;padding:6px 10px!important}
 }
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><button class="brand navbtn brand-photographer" data-page="home"><span class="brand-name">VITALY BYSTROV</span><span class="brand-sep">|</span><span class="brand-role">PHOTOGRAPHER</span></button><button aria-label="Открыть меню" class="menu-toggle" id="menuToggle">MENU</button><nav class="mainnav" id="mainNav"><div class="navgrid">
+<header><div class="wrap nav"><button class="brand navbtn brand-photographer" data-page="home"><span class="brand-name">VITALY BYSTROV</span><span class="brand-sep">l</span><span class="brand-role">PHOTOGRAPHER</span></button><button aria-label="Открыть меню" class="menu-toggle" id="menuToggle">MENU</button><nav class="mainnav" id="mainNav"><div class="navgrid">
 <button class="navbtn" data-page="home">HOME</button>
 <button class="navbtn" data-page="about">ABOUT</button>
 <div class="portfolio-menu"><button class="navbtn portfolio-title" id="portfolioBtn" type="button"><span>PORTFOLIO</span><span>+</span></button><div class="portfolio-sub">
@@ -414,7 +534,7 @@ header{z-index:1000}
 <a class="btn" href="https://www.youtube.com/watch?v=ZrSl7YH0XeE" rel="noopener" target="_blank">ОТКРЫТЬ В YOUTUBE</a>
 </div></section>
 <div class="divider"></div>
-<section class="section journal-gallery-section"><div class="wrap narrow"><div class="gallery-feature"><div class="gallery-feature-copy"><img class="journal-gallery-card" src="journal-best-sessions-card.png" alt="Лучшие фотосессии — VITALY BYSTROV"/><div class="eyebrow">VITALY BYSTROV</div><h2>Лучшие фотосессии</h2><p class="journal-gallery-lead">Моя личная галерея — избранные фотографии, места и фотосессии.</p><a class="btn" href="https://bistroffphoto.gallery.photo/" rel="noopener" target="_blank">ОТКРЫТЬ ЛИЧНУЮ ГАЛЕРЕЮ</a></div></div></div></section>
+<section class="section journal-gallery-section"><div class="wrap narrow"><div class="gallery-feature"><div class="gallery-feature-copy"><img class="journal-gallery-card" src="journal-best-sessions-card.jpg" alt="Лучшие фотосессии — VITALY BYSTROV"/><div class="eyebrow">VITALY BYSTROV</div><h2>Лучшие фотосессии</h2><p class="journal-gallery-lead">Моя личная галерея — избранные фотографии, места и фотосессии.</p><a class="btn" href="https://bistroffphoto.gallery.photo/" rel="noopener" target="_blank">ОТКРЫТЬ ЛИЧНУЮ ГАЛЕРЕЮ</a></div></div></div></section>
 </section>
 <section class="page menu-page" id="page-tiktok"><section class="section tiktok-simple"><div class="wrap narrow social-page"><div class="tiktok-lockup" aria-label="TikTok"><svg class="tiktok-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M40.2 8.5c2.3 5.5 6.2 8.9 12.3 9.5v8.4c-4.2-.1-8.1-1.3-11.8-3.7v19.1c0 8.7-6.7 14.2-14.8 14.2-7.5 0-13.4-5.2-13.4-12.4 0-7.5 6.2-12.7 14.5-12.7 1 0 2 .1 3 .3v8.1c-.9-.3-1.9-.5-2.9-.5-3.5 0-6.3 2-6.3 5.1 0 2.8 2.3 4.8 5.3 4.8 3.7 0 6.2-2.4 6.2-7V8.5h7.9z" fill="#25F4EE" opacity=".92" transform="translate(-2,1)"/><path d="M40.2 8.5c2.3 5.5 6.2 8.9 12.3 9.5v8.4c-4.2-.1-8.1-1.3-11.8-3.7v19.1c0 8.7-6.7 14.2-14.8 14.2-7.5 0-13.4-5.2-13.4-12.4 0-7.5 6.2-12.7 14.5-12.7 1 0 2 .1 3 .3v8.1c-.9-.3-1.9-.5-2.9-.5-3.5 0-6.3 2-6.3 5.1 0 2.8 2.3 4.8 5.3 4.8 3.7 0 6.2-2.4 6.2-7V8.5h7.9z" fill="#FE2C55" opacity=".92" transform="translate(2,-1)"/><path d="M40.2 8.5c2.3 5.5 6.2 8.9 12.3 9.5v8.4c-4.2-.1-8.1-1.3-11.8-3.7v19.1c0 8.7-6.7 14.2-14.8 14.2-7.5 0-13.4-5.2-13.4-12.4 0-7.5 6.2-12.7 14.5-12.7 1 0 2 .1 3 .3v8.1c-.9-.3-1.9-.5-2.9-.5-3.5 0-6.3 2-6.3 5.1 0 2.8 2.3 4.8 5.3 4.8 3.7 0 6.2-2.4 6.2-7V8.5h7.9z" fill="#fff"/></svg><span>TikTok</span></div><a class="btn tiktok-btn" href="https://www.tiktok.com/@vitaly_bistroff" rel="noopener" target="_blank">ОТКРЫТЬ TIKTOK</a></div></section></section>
 <section class="page menu-page" id="page-reservation"><div class="page-head site-head"><div class="wrap"><div class="eyebrow">INFO</div><h1>RESERVATION</h1><p>Бронирование даты фотосессии.</p></div></div><section class="section"><div class="wrap reservation-page"><div class="reservation-hero"><img src="reservation-reference.png" alt="Reservation details"/></div><div class="reservation-copy"><div class="reservation-col"><h2>💳 Как забронировать дату съёмки:</h2><p><strong>Для подтверждения вашей даты необходима предоплата в размере: 100 GEL.</strong></p><p>Реквизиты для перевода:</p><ul><li>Bank: Bank of Georgia</li><li>Получатель: <strong>VITALY BYSTROU</strong></li><li>Номер счета (IBAN): <strong>GE12 BG00 0000 0061 2657 929</strong></li></ul><p class="reservation-note">После перевода нажмите кнопку ниже, чтобы отправить мне скриншот чека и закрепить дату.</p></div><div class="reservation-col"><h2>💳 How to book your photoshoot:</h2><p><strong>A prepayment of 100 GEL is required to secure your date.</strong></p><p>Bank details:</p><ul><li>Bank: Bank of Georgia</li><li>Beneficiary Name: <strong>VITALY BYSTROU</strong></li><li>Account Number (IBAN): <strong>GE12BG0000000612657929</strong></li></ul><p class="reservation-note">After the transfer, please click the button below to send the receipt screenshot and confirm your booking.</p></div></div><div class="reservation-action"><a class="btn" href="https://wa.me/995550508053?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%AF%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BB(%D0%B0)%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%83%20%D0%B7%D0%B0%20%D1%84%D0%BE%D1%82%D0%BE%D1%81%D0%B5%D1%81%D1%81%D0%B8%D1%8E.%20%D0%92%D0%BE%D1%82%20%D0%BC%D0%BE%D0%B9%20%D1%87%D0%B5%D0%BA." rel="noopener" target="_blank">✅ Отправить чек и подтвердить дату</a></div></div></section></section><section class="page menu-page" id="page-clients"><div class="page-head"><div class="wrap"><div class="eyebrow">CLIENTS</div><h1>Клиенты</h1><p>Клиентские галереи VITALY BYSTROV.</p></div></div><section class="section"><div class="wrap" style="text-align:center"><div class="contact-card"><h2 style="font-family:Georgia,serif;font-weight:400">CLIENT GALLERIES</h2><p>Раздел сохранён отдельно от портфолио, чтобы клиентские материалы не смешивались с публичными фотографиями.</p><p class="note">Для защищённых клиентских галерей используется инфраструктура Pixieset.</p><a class="btn" href="https://vitalibystrov.mypixieset.com/clients/" rel="noopener" target="_blank">ОТКРЫТЬ КЛИЕНТСКИЕ ГАЛЕРЕИ</a></div></div></section></section>
@@ -424,7 +544,7 @@ header{z-index:1000}
 <details class="agreement full-doc"><summary>СОГЛАСИЕ на использование изображения гражданина</summary><div class="doc-body"><p><strong>г. Тбилиси, Грузия</strong></p><p>«_____» ______________ 20_____ г.</p><p>Я, ________________________________________________________________,<br/>(фамилия, имя)</p><p>дата рождения: «_____» ______________ ______ г.,<br/>гражданство: ______________________________,<br/>паспорт / ID №: _________________________________________________,</p><p>настоящим добровольно предоставляю <strong>Быстрову Виталию Анатольевичу</strong> (ФИО фотографа / наименование физического или юридического лица) право осуществлять фотографирование и/или видеосъёмку с моим участием, а также использовать созданные в результате такой съёмки фотографии, видеозаписи и иные материалы, содержащие моё изображение.</p><h3>1. Цель использования изображения</h3><p>Я разрешаю использовать моё изображение для:</p><ul><li>фотографического портфолио;</li><li>публикации на официальном сайте;</li><li>социальных сетей, включая Instagram, Facebook, TikTok, YouTube и другие платформы;</li><li>демонстрации фотографических и творческих работ;</li><li>участия в конкурсах, выставках и фотопроектах;</li><li>рекламных и маркетинговых материалов;</li><li>презентаций и промо-материалов фотографа/организатора;</li><li>печатных материалов;</li><li>иных аналогичных творческих, информационных и рекламных целей, связанных с деятельностью фотографа/организатора.</li></ul><h3>2. Способы использования</h3><p>Я разрешаю использовать фотографии и видеоматериалы с моим изображением путем:</p><ul><li>публикации в сети Интернет;</li><li>размещения в социальных сетях;</li><li>публикации на сайтах и онлайн-платформах;</li><li>демонстрации на выставках и мероприятиях;</li><li>размещения в рекламных материалах;</li><li>печати и распространения в полиграфической продукции;</li><li>включения в портфолио фотографа;</li><li>технической обработки, кадрирования, цветокоррекции, ретуши и иного обычного редактирования изображения.</li></ul><p>При этом обработка изображения не должна осуществляться способом, который существенно изменяет мою внешность или создает заведомо ложное представление обо мне, если иное отдельно не согласовано со мной.</p><h3>3. Территория использования</h3><p>Настоящее согласие предоставляется для использования изображения на территории Грузии и за пределами Грузии, включая распространение через Интернет, где территория доступа к материалам не может быть ограничена одной страной.</p><h3>4. Срок действия</h3><p>☐ на 1 год;<br/>☐ на 3 года;<br/>☐ на 5 лет;<br/>☐ бессрочно до отзыва согласия.</p><p>Выбранный срок: _________________________________________________.</p><h3>5. Вознаграждение</h3><p>Стороны договорились, что:</p><p>☐ использование изображения осуществляется безвозмездно;<br/>☐ за участие в съёмке и предоставление права использования изображения мне выплачивается вознаграждение в размере:<br/>______________________________ GEL.</p><p>Дополнительные условия оплаты:<br/>__________________________________________________________________.</p><h3>6. Персональные данные</h3><p>Я подтверждаю, что получил(а) информацию о целях использования моего изображения и согласен(на) на его обработку в пределах настоящего документа.</p><p>Мне известно, что в соответствии с применимым законодательством Грузии согласие на обработку персональных данных может быть отозвано в предусмотренном законом порядке.</p><p>В случае отзыва согласия дальнейшая обработка данных должна осуществляться в соответствии с применимым законодательством Грузии и с учетом юридических последствий обработки, осуществленной до момента отзыва.</p><h3>7. Передача материалов третьим лицам</h3><p>☐ Я разрешаю передавать созданные материалы третьим лицам исключительно для целей, указанных в настоящем согласии.<br/>☐ Передача материалов третьим лицам не разрешается без моего отдельного согласия, за исключением технических подрядчиков, необходимых для хранения, обработки или публикации материалов.</p><h3>8. Отсутствие претензий</h3><p>Я подтверждаю, что предоставляю настоящее согласие добровольно, понимаю характер и цели использования моего изображения и не имею претензий к самому факту фото-/видеосъёмки в пределах условий настоящего документа.</p><p>Настоящее согласие не предоставляет право использовать моё изображение в незаконных целях либо в контексте, способном нарушить мои честь, достоинство или иные охраняемые законом права.</p><h3>9. Заключительные положения</h3><p>Я подтверждаю, что прочитал(а) настоящий документ, понимаю его содержание и согласен(на) с изложенными в нём условиями.</p><p>Настоящее согласие составлено в двух экземплярах, по одному для каждой стороны.</p><p><strong>Модель / гражданин:</strong><br/>ФИО: _____________________________________________________________<br/>Подпись: ___________________________<br/>Дата: «_____» ______________ 20_____ г.</p><p><strong>Фотограф / организатор:</strong><br/>ФИО / наименование: Быстров Виталий Анатольевич<br/>Подпись: ___________________________<br/>Дата: «_____» ______________ 20_____ г.</p><button class="download-btn" onclick="downloadDoc('consent')">СКАЧАТЬ ДОКУМЕНТ</button></div></details>
 </div></section></section>
 <section class="page menu-page" id="page-presets"><div class="page-head site-head"><div class="wrap"><div class="eyebrow">INFO</div><h1>PRESETS</h1><p>Авторские пресеты VITALY BYSTROV для обработки фотографий.</p></div></div><section class="section"><div class="wrap narrow"><div class="contact-card presets-card"><h2 style="font-family:Georgia,serif;font-weight:400">PRESETS</h2><p>Авторские пресеты и материалы VITALY BYSTROV размещены на основном сайте.</p><img class="presets-portrait" src="final-home-photo.png" alt="VITALY BYSTROV — portrait"/><a class="btn" href="https://vitalibystrov.mypixieset.com/presets/" rel="noopener" target="_blank">ОТКРЫТЬ PRESETS</a></div></div></section></section>
-<section class="page menu-page" id="page-contact"><div class="page-head site-head"><div class="wrap"><div class="eyebrow">CONTACT</div><h1>ДАВАЙТЕ СОЗДАДИМ ЭТО ВМЕСТЕ.</h1><p>Расскажите о своей идее — я помогу воплотить её в фотографии.</p></div></div><section class="section"><div class="wrap section-grid"><div><h2>Связь со мной</h2><p class="note">Я стараюсь отвечать на все запросы как можно скорее.</p><p>Email: <a href="mailto:bistroff84@mail.ru">bistroff84@mail.ru</a><br/>Phone: <a href="tel:+995550508053">+995 550 50 80 53</a></p><p class="contact-instagram"><a href="https://www.instagram.com/vitaly_bistr.off/" rel="noopener" target="_blank">INSTAGRAM · @vitaly_bistr.off</a></p><p class="contact-instagram contact-vichat"><a href="https://t.me/bistrof_bot2" rel="noopener" target="_blank">🗣️ Vi-Chat</a></p></div><div class="copy"><form class="contact-form" id="contactForm"><label>Ваше имя<input autocomplete="name" name="name" required=""/></label><label>Email<input autocomplete="email" name="email" required="" type="email"/></label><label>Сообщение<textarea name="message" required="" rows="7"></textarea></label><button class="btn" type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button><p class="note">Сообщение будет подготовлено для отправки на bistroff84@mail.ru.</p></form><h3 class="faq-title">FAQ</h3><p><strong>Как проходит фотосессия?</strong><br/>После знакомства мы обсуждаем идею, формат, место и детали съёмки. Во время фотосессии я помогаю с позированием, светом и настроением кадра, чтобы вы чувствовали себя естественно и уверенно перед камерой.</p><p><strong>Можно ли обратиться, если я ещё не определился с датой?</strong><br/>Конечно. Вы можете связаться со мной заранее, даже если дата или идея съёмки пока не определены. Мы обсудим ваши пожелания и вместе подберём подходящий формат.</p><p><strong>Возможна ли съёмка за пределами Тбилиси?</strong><br/>Да. Я открыт к съёмкам в других городах и локациях Грузии. Возможность и условия выезда обсуждаются индивидуально в зависимости от места и формата съёмки.</p></div></div></section></section></main><footer class="footer">© 2026 VITALY BYSTROV | PHOTOGRAPHER TBILISI, GEORGIA</footer>
+<section class="page menu-page" id="page-contact"><div class="page-head site-head"><div class="wrap"><div class="eyebrow">CONTACT</div><h1>ДАВАЙТЕ СОЗДАДИМ ЭТО ВМЕСТЕ.</h1><p>Расскажите о своей идее — я помогу воплотить её в фотографии.</p></div></div><section class="section"><div class="wrap section-grid"><div><h2>Связь со мной</h2><p class="note">Я стараюсь отвечать на все запросы как можно скорее.</p><p>Email: <a href="mailto:bistroff84@mail.ru">bistroff84@mail.ru</a><br/>Phone: <a href="tel:+995550508053">+995 550 50 80 53</a></p><p class="contact-instagram"><a href="https://www.instagram.com/vitaly_bistr.off/" rel="noopener" target="_blank">INSTAGRAM · @vitaly_bistr.off</a></p><p class="contact-instagram contact-telegram"><a href="https://t.me/VITALY_BISTROFF" rel="noopener" target="_blank">✉ Написать в Telegram</a></p></div><div class="copy"><form class="contact-form" id="contactForm"><label>Ваше имя<input autocomplete="name" name="name" required=""/></label><label>Email<input autocomplete="email" name="email" required="" type="email"/></label><label>Сообщение<textarea name="message" required="" rows="7"></textarea></label><button class="btn" type="submit">ОТПРАВИТЬ СООБЩЕНИЕ</button><p class="note">Сообщение будет подготовлено для отправки на bistroff84@mail.ru.</p></form><h3 class="faq-title">FAQ</h3><p><strong>Как проходит фотосессия?</strong><br/>После знакомства мы обсуждаем идею, формат, место и детали съёмки. Во время фотосессии я помогаю с позированием, светом и настроением кадра, чтобы вы чувствовали себя естественно и уверенно перед камерой.</p><p><strong>Можно ли обратиться, если я ещё не определился с датой?</strong><br/>Конечно. Вы можете связаться со мной заранее, даже если дата или идея съёмки пока не определены. Мы обсудим ваши пожелания и вместе подберём подходящий формат.</p><p><strong>Возможна ли съёмка за пределами Тбилиси?</strong><br/>Да. Я открыт к съёмкам в других городах и локациях Грузии. Возможность и условия выезда обсуждаются индивидуально в зависимости от места и формата съёмки.</p></div></div></section></section></main><footer class="footer">© 2026 VITALY BYSTROV | PHOTOGRAPHER TBILISI, GEORGIA</footer>
 <script>
 const pages=['home','about','models','portraits','street','landscape','journal','tiktok','reservation','clients','prices','agreements','presets','contact'];
 const mainNav=document.getElementById('mainNav');

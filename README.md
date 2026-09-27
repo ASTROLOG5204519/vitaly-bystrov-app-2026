@@ -1,3 +1,9 @@
-VITALY BYSTROV APP v35
+VITALY BYSTROV APP v48
 
-V35 adds a RU / EN / KA flag language switcher below the MENU button and translates the main interface/core pages. Legal agreement documents remain in Russian for now. INFO content was not fabricated because the live Pixieset site could not be retrieved from the current environment; provide the updated INFO screenshot/text to sync it exactly.
+Base: VITALY_BYSTROV_APP_v39_CONTACT_WHATSAPP
+Changes:
+1. CONTACT no longer uses Vi-Chat.
+2. CONTACT now has “✉ Написать в Telegram” -> https://t.me/VITALY_BISTROFF
+3. JOURNAL cover replaced with the supplied portrait image.
+4. Main MENU button is slightly bolder and red.
+5. Reservation WhatsApp flow from v39 is preserved.
