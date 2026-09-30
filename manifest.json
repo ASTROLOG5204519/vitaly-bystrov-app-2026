@@ -1,16 +1,11 @@
 {
   "name": "Vitaly Bystrov Photography",
   "short_name": "VB Photo",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
-  "orientation": "portrait-primary",
-  "icons": [
-    {
-      "src": "favicon.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
+ "start_url": "/2026/", 
+"icons": [
+  {
+    "src": "/2026/favicon.png", 
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+]
