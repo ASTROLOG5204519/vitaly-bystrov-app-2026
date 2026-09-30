@@ -798,4 +798,16 @@ s0.parentNode.insertBefore(s1,s0);
     }
   });
 </script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      // Этот код автоматически определит правильную папку
+      const swPath = new URL('sw.js', import.meta.url || document.baseURI).href;
+      
+      navigator.serviceWorker.register(swPath)
+        .then(reg => console.log('SW registered:', reg.scope))
+        .catch(err => console.error('SW failed:', err));
+    });
+  }
+</script>
 </body></html>
