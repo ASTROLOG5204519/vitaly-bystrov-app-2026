@@ -1,11 +1,18 @@
 {
   "name": "Vitaly Bystrov Photography",
   "short_name": "VB Photo",
- "start_url": "/2026/", 
-"icons": [
-  {
-    "src": "/2026/favicon.png", 
-    "sizes": "512x512",
-    "type": "image/png"
-  }
-]
+  "description": "Фотограф в Тбилиси. Сохраняю эмоции, а не просто моменты.",
+  "start_url": "/2026/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/2026/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
