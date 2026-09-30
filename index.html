@@ -8,6 +8,13 @@
 <meta content="VITALY BYSTROV – фотограф в Тбилиси." name="description">
 <link href="manifest.json" rel="manifest">
 <title>ВИТАЛИЙ БЫСТРОВ – ФОТОГРАФ ТБИЛИСИ | APP v33</title>
+    <!-- НАЧАЛО: Настройки для иконки и приложения -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="theme-color" content="#000000">
+
+<link rel="manifest" href="manifest.json">
+<!-- КОНЕЦ настроек -->
 
 <!-- Open Graph теги для превью -->
 <!-- Начало настроек для красивой ссылки -->
@@ -764,5 +771,29 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<!-- Скрипт кнопки установки -->
+<button id="install-btn" style="display:none; position:fixed; bottom:20px; right:20px; background:#ff4500; color:white; border:none; padding:15px 25px; border-radius:30px; font-weight:bold; cursor:pointer; box-shadow:0 4px 15px rgba(255,69,0,0.4); z-index:1000;">
+  📲 Установить приложение
+</button>
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('install-btn');
 
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // Показываем кнопку только если браузер поддерживает установку
+    installBtn.style.display = 'block'; 
+  });
+
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response: ${outcome}`);
+      deferredPrompt = null;
+      installBtn.style.display = 'none';
+    }
+  });
+</script>
 </body></html>
